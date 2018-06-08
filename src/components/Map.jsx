@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { withGoogleMap, GoogleMap, Marker } from 'react-google-maps';
 
 const InnerMap = withGoogleMap(({ location, marker}) => (
@@ -16,7 +17,7 @@ const Map = ({ location }) => (
     containerElement={(<div />)}
     mapElement={(<div className="map" />)}
     location={location}
-    marker={{ location }}
+    marker={{ position: location }}
   />
   );
 
